@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Happy JALOJEI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="banner">
+      <h2>
+        <span style="--i: 1"></span>
+        <span style="--i: 2"></span>
+        <span style="--i: 3">J</span>
+        <span style="--i: 4">A</span>
+        <span style="--i: 5">L</span>
+        <span style="--i: 6">O</span>
+        <span style="--i: 7">J</span>
+        <span style="--i: 8">E</span>
+        <span style="--i: 9">I</span>
+      </h2>
+      <img src="spider.png" class="spider" />
+      <img src="pumpkin01.png" class="pumpkin01" />
+      <img src="pumpkin02.png" class="pumpkin02" />
+      <img src="spiderWeb.png" class="spiderWeb" />
+
+      <div id="spoti">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0U7I0DeAuJEqNUwnU5Ou9V?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+</section>
+
+
+<section class="main d-flex flex-column align-items-center justify-content-center">
+
+
+       <!-- Video de murciélago -->
+       <div class="video-container mb-4 text-center">
+        <video width="200" autoplay loop muted>
+            <source src="bat_animation.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </div>
+
+    <div class="text-center">
+        <div id="countdown" class="mt-5">
+            <h3 class="text-yellow">La peor generación regresa en: </h3>
+            <div id="timer" class="text-yellow">
+                <span id="days">0</span> días 
+                <span id="hours">0</span> horas 
+                <span id="minutes">0</span> minutos 
+                <span id="seconds">0</span> segundos
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <!-- Carrusel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="toman/WhatsApp Image 2024-09-21 at 2.28.04 PM (1).jpeg" class="d-block w-100" alt="..." style="height: 300px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+                <img src="toman/WhatsApp Image 2024-09-21 at 2.28.04 PM.jpeg" class="d-block w-100" alt="..." style="height: 300px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+                <img src="toman/WhatsApp Image 2024-09-21 at 2.28.05 PM.jpeg" class="d-block w-100" alt="..." style="height: 300px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+                <img src="toman/WhatsApp Image 2024-09-21 at 2.28.50 PM.jpeg" class="d-block w-100" alt="..." style="height: 300px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+                <img src="toman/WhatsApp Image 2024-09-21 at 2.30.24 PM.jpeg" class="d-block w-100" alt="..." style="height: 300px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+                <img src="toman/WhatsApp Image 2024-09-21 at 2.30.25 PM.jpeg" class="d-block w-100" alt="..." style="height: 300px; object-fit: cover;">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    const countdownDate = new Date("October 31, 2024 18:00:00").getTime();
+
+    const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "¡La cuenta regresiva ha terminado!";
+        }
+    }, 1000);
+</script>
+</body>
+</html>
